@@ -1,4 +1,4 @@
-project: rnshah9/nanogui-sdl
+project: nanogui-sdl
 target: bin2c
 
 cmds:
