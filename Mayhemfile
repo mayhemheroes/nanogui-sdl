@@ -2,4 +2,4 @@ project: nanogui-sdl
 target: bin2c
 
 cmds:
-  - cmd: /repo/resources/bin2c a b @@
+  - cmd: /bin2c a b @@

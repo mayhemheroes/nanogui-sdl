@@ -7,11 +7,5 @@ COPY . /repo
 WORKDIR /repo/resources
 RUN gcc -o bin2c bin2c.c
 
-RUN mkdir -p /deps
-RUN ldd /repo/resources/bin2c | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I % sh -c 'cp % /deps;'
-
 FROM ubuntu:22.04 as package
-
-COPY --from=builder /deps /deps
-COPY --from=builder /repo/resources/bin2c /repo/resources/bin2c
-ENV LD_LIBRARY_PATH=/deps
+COPY --from=builder /repo/resources/bin2c /
