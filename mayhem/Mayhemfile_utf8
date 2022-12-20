@@ -1,0 +1,6 @@
+project: nanogui-sdl
+target: utf8
+
+cmds:
+  - cmd: /fuzz_utf8
+    libfuzzer: true
